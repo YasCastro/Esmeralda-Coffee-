@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React  from 'react';
+import "./App.css";
+import Text from "./Molecules/Text";
+import Navigation from "./Molecules/Navigation";
+import CSSTransitionGroup from "react-addons-css-transition-group";
+//import TransitionGroup from "react-addons-transition-group";
+const logo = require('./assets/Emerald.png');
 
-const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+//type visibility  = { visible: boolean; }
+
+
+class App extends React.Component/* <visibility> */{
+  
+  /* constructor (props : any) {
+    super(props);
+    this.state = { visible: true};
+    this.handleLoad = this.handleLoad.bind(this);
+  } 
+
+  handleLoad () {
+    this.setState({ visible: !this.state.visible });
+  } */
+
+  render () {
+    return (
+      <>
+        <CSSTransitionGroup transitionName = "try-out">
+        <div id = "overDiv" >
+          <img id = 'emerald' src ={logo} alt = ""></img>
+        </div>
+        </CSSTransitionGroup>
+        <div id = "underDiv">
+          <div id = "background">
+          <Text 
+          title = "We love coffee" 
+          subtitle = "chapter 02"
+          description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nam placerat ultricies quam sit amet varius. Duis venenatis viverra leo, vitae tristique enim. "
+            ></Text>
+          </div>
+        </div> 
+        <Navigation/>       
+      </>
+    );
+  }
 }
 
 export default App;
+

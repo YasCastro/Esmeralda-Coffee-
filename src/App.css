@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, #root {
+  min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-image: url("./assets/Plant.png");
+  background-size: cover;
   display: flex;
-  flex-direction: column;
+  align-items: center; 
+}
+
+
+
+div#overDiv {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  max-width: 1270px;
+  width: 100%;
+  height: 700px;
+  padding: 10px;
+  position: absolute;
+  background-color: #31a582;
+  margin: 15px auto 0 10%;
+  margin-left: 10%;
+  font-size: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  z-index: 3;
+}
+
+div#overDiv .closed{
+  max-width: 0%;
+}
+
+div#underDiv{
+  max-width: 1270px;
+  width: 100%;
+  height: 700px;
+  padding: 10px;
+  position: absolute;
+  background-color: #fff;
+  background-image: url('./assets/05.png');
+  background-size: 1270px auto;
+  margin: 15px auto 0 10%;
+  margin-left: 10%;
+  font-size: 50px;
+  color: #fff;
+  display: flex;
+  z-index: -1;
+}
+
+div#background {
+  margin-bottom: 5px;
+  margin-top: auto;
+  margin-left: 150px;
+  background-color: #fff;
+  z-index: 0;
+  width: 950px;
+  height: 600px;
+  color: #31a582;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+div#background h2{
+  font-family: "Elephant", Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: #31a582;
+  margin-bottom: 20px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div#background h4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: rgb(94, 88, 88);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+div#margin{
+  width: 400px;
+  height: 450px;
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+div#sideImage{
+  width: 400px;
+  height: 450px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#background p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgb(94, 88, 88); 
+  margin-bottom: 10px;
+}
+
+div#overDiv img#emerald{
+  width: 150px;
+  height: 150px;
+}
+
+div#navigationWrap {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #31a582;
+  text-transform: uppercase;
+  font-size: 16px;
+  background-image: url("./assets/pink-salmon.png");
+  width: 950px;
+  height: 70px;
+  margin-top: 645px;
+  margin-left: 320px;
+  margin-bottom: 0px;
+  z-index: 2;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+div#itemWrap {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#itemWrap button{
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  color: #31a582;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div#brand {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img#esmeraldaBrand {
+  width: 130px;
+}
+
+@keyframes presentation {
+  from {opacity: 100%}
+  to {opacity: 0%}
+}
+
+img#MainRoast {
+  width: 200px;
 }
